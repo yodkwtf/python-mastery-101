@@ -23,3 +23,51 @@
   text = " ".join(words) # joins the words with a space
   print(text)
   ```
+
+---
+
+## List Comprehension
+
+- does a specific task for every iteration when looping over a list and it creates a new list
+  ```bash
+  nums = [1, 2, 3]
+  # create a new list where the items are doubles
+  doubled_nums = [num*2  for num in nums]
+  print(doubled_nums)
+  ```
+- technically, we can do the same using loops but that'd be a bit tedious
+- used a lot with data science, web deb, etc.
+
+#### LS with Conditional Logic
+
+```bash
+numbers = [1,2,3,4,5,6]
+
+# store even values
+evens = [num for num in numbers if num % 2 == 0] # [2,4,6]
+
+# if even, double it and if odd, half it
+weird = [num*2 if num%2==0 else num/2 for num in numbers] # [.5, 4, 1.5, 8, 2.5, 12]
+```
+
+---
+
+## Nested Lists
+
+- lists inside lists
+- used a lot in almost all of the fields
+
+  ```
+  nested_list = [[1,2,3], [4,5,6], [7,8,9]]
+
+  print(nested_list[0][1]) #2
+  print(nested_list[1][-1]) #6
+  ```
+
+- we'll have to use nested loops to iterate over these
+
+- List Comprehension in Nested Loop
+  ```
+  empty_board = [['x' for x in range(1,4)] for n in range(1,4)]
+  print(empty_board)
+  ```
