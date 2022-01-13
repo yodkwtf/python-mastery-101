@@ -1,4 +1,5 @@
-days = ('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+s = {x **2 for x in range(5)}
 
-# access data with index
-print(days[0]) # monday
+print(s) # {0, 1, 4, 9, 16}
+
+print({letter for letter in "hello"}) # {'h', 'o', 'l', 'e'}
