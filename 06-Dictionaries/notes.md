@@ -119,3 +119,40 @@ if "nails" in cat:
   print(d.get('a')) # 1
   print(d.get('c')) # None
   ```
+
+##### pop(key)
+
+- removes the specified key and its value
+- gives an error if the key doesn't exist
+- returns the value of the item that is removed
+
+  ```bash
+  d = dict(a=1,b=2)
+
+  print(d) # {'a':1, 'b':2}
+  print(d.pop('a')) # 1
+  print(d) # {'b': 2}
+  ```
+
+##### popitem()
+
+- removes any random key from the the dictionary
+- does not take any argument
+
+##### update()
+
+- add everything from one dictionary to another one
+
+  ```bash
+  a = dict(a=1,b=2)
+  b = {'c':3}
+
+  #  update `b` with `a`
+  b.update(a)
+
+  print(b) # {'c': 3, 'a': 1, 'b': 2}
+  ```
+
+- it doesn't overwrite prev existing values
+- it does overwrite duplicate key-values
+- it only updates and does not remove anything if we pass a dictionary w fewer properties
