@@ -156,3 +156,20 @@ if "nails" in cat:
 - it doesn't overwrite prev existing values
 - it does overwrite duplicate key-values
 - it only updates and does not remove anything if we pass a dictionary w fewer properties
+
+---
+
+## Dictionary Comprehension
+
+- iterates over keys by default
+- `.items()` can be used to iterate over both keys and values
+
+#### Conditional Logic with Dictionary Comprehension
+
+Just add if else according to logic man ughh
+
+```bash
+new_list = {num: 'even' if num%2==0 else 'odd' for num in range(1, 10)}
+
+# new_list = {1: 'odd', 2: 'even', 3: 'odd', 4: 'even', 5: 'odd', 6: 'even', 7: 'odd', 8: 'even', 9: 'odd'}
+```
