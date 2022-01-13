@@ -64,6 +64,7 @@ stack = set(projects)
 #### Set Comprehension
 
 - same stuff as we have for list and dict comprehension
+- useful when we convert other data types into set to get unique instances
 
   ```py
   s = {x **2 for x in range(5)}
