@@ -1,6 +1,6 @@
 ## Functions
 
-Block of code that performs similar tasks every time it is run
+A function is a block of code that performs similar tasks every time it is called. It can take inputs and returns output when the return keyword is used.
 
 ```py
 # defining a function
@@ -92,3 +92,63 @@ print(expo(y=2, x=3)) # 9
 ```
 
 > When we use `=` while defining a function, we set up a default parameter whereas when we use `=` while invoking a function we make a keyword argument
+
+---
+
+## Scope
+
+- where our variables can be accessed
+- whenever we define a variable inside a func, it can only be used inside the function
+
+#### Global
+
+- when we have variables outside a function they are called global
+- we can alter a global value from inside a function in the usual way
+- we need to use `global` keyword to reference the variable from global scope (here we basically tell function that we want to use global variable cuz by default function looks for a local variable)
+
+  ```py
+  total = 0
+
+  def inc():
+      global total # if we don't have this line, we get an error
+      total+=1
+      return total
+
+  inc()
+  ```
+
+- we don't need to use `global` keyword if we only want to access and not change it
+
+#### nonlocal
+
+- lets us modify a parent's variables in a child (nested) function
+  ```py
+  def outer():
+    count = 0
+    def inner():
+      nonlocal count # tells function we're not looking for a local variable (works similar to global)
+      count += 1
+      return count
+    return inner()
+  ```
+- works similar to `global` keyword but used for cases like above where a parent's variable needs to be manipulated but it's not in the global score
+
+---
+
+## Documenting Functions
+
+- **Doc Strings** can be used to explain what a function does
+- use `""" msg """` inside a function to write a doc string
+- they can even be accessed using `function_name.__doc__`
+
+  ```py
+  def say_hello():
+    """ A simple function to return a hello msg to user"""
+    return "Hello Friend!"
+
+  print(say_hello()) # Hello Friend!
+  print(say_hello.__doc__) # A simple function to return a hello msg to user
+  ```
+
+- we can see the doc string even for the built-in functions
+  `print(print.__doc__)`
