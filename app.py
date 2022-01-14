@@ -1,5 +1,10 @@
-s = {x **2 for x in range(5)}
-
-print(s) # {0, 1, 4, 9, 16}
-
-print({letter for letter in "hello"}) # {'h', 'o', 'l', 'e'}
+def speak(animal = "dog"):
+    if animal == "pig":
+        return "oink"
+    elif animal == "duck":
+        return "quack"
+    elif animal == "cat":
+        return "meow"
+    elif animal == "dog":
+        return "woof"
+    return "?"
