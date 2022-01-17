@@ -86,12 +86,15 @@ print(exponent(4)) # 4**2 = 16
 def expo(x, y):
   return x**y
 
+# normal
 print(expo(3, 2)) # 9
 print(expo(2, 3)) # 8
+
+# keyword arguments
 print(expo(y=2, x=3)) # 9
 ```
 
-> When we use `=` while defining a function, we set up a default parameter whereas when we use `=` while invoking a function we make a keyword argument
+> When we use **=** while defining a function, we set up a default parameter whereas when we use **=** while invoking a function we make a keyword argument
 
 ---
 
@@ -152,3 +155,55 @@ print(expo(y=2, x=3)) # 9
 
 - we can see the doc string even for the built-in functions
   `print(print.__doc__)`
+
+---
+
+## args and kwargs
+
+#### \*args
+
+- special operator we pass to functions
+- gathers any remaining arguments after using it as a tuple
+- can be called anything - `*some_name`
+
+```py
+# when we no. of parameters to be passed
+def sum_all_nums(a, b, c):
+  return a+b+c
+
+print(sum_all_nums(2,5,7)) #14
+
+# when no. of parameters isn't fixed
+def sum_nums(*args):
+  total=0
+  for num in args:
+    total += num
+  return total
+
+print(sum_nums(2,5,3)) #10
+print(sum_nums(1,2,3,4,5)) #15
+```
+
+- we can have as many arguments as we want without having corresponding parameters for them
+
+#### \*\*kwargs
+
+- special operator passed w functions
+- looks for keyword arguments
+- gathers all the remaining keyword arguments after it is used into a dictionary
+- can be called anything we want - `**some_name`
+
+```py
+def fav_colors(**kwargs):
+  for k, v in kwargs.items():
+    print(f"{k}'s fav color is {v}")
+
+fav_colors(durgesh="red", john="black", tanu="pink")
+'''
+durgesh's fav color is red
+john's fav color is black
+tanu's fav color is pink
+'''
+```
+
+- we can pass as many keyword arguments and it'll print the fav color for each of them
