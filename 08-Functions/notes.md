@@ -220,3 +220,72 @@ tanu's fav color is pink
   `print(print.__doc__)`
 
 ---
+
+## Unpacking
+
+#### TUPLE UNPACKING - using `*` as an argument
+
+- `*collection` - breaks down collection into its single items so each item can act as an argument instead of whole collection being an argument
+
+```py
+def print_args(*args):
+  print(args)
+
+nums = [1,3,2,4]
+
+print_args(1,3,4,5) #(1, 3, 4, 5)
+print_args(nums) #([1, 3, 2, 4],)
+print_args(*nums) #(1, 3, 2, 4)
+```
+
+So if we have to a pass a long list to a function call where we want to use all the single items from the list, we can use unpacking to break down list items into separate individual arguments
+
+- works the same with tuples too
+
+#### DICTIONARY UNPACKING - using `**` as an argument
+
+- `**dictionary` - used to unpack dictionary into its individual key-value pairs
+
+###### Unpacking with Parameters
+
+```py
+def display_names(first, second):
+  print(first, second)
+
+name = {"first": "John", "second":"Doe"}
+
+display_names(first="Colt", second="Steele")
+# Colt Steele -> first = Colt, second = Steele
+
+display_names(name)
+# TypeError -> first = names, second = ???
+
+display_names(**name) # UNPACKED
+# John Doe -> first = name[first], second = name[second]
+```
+
+###### Unpacking with Kwargs
+
+```py
+def add_nums(a,b,c,**kwargs):
+  print(a+b+c)
+  print('some more code')
+  print(kwargs)
+
+dict1 = dict(a=1, b=2, c=5)
+dict2 = dict(a=1, b=2, c=5, d=15, name="Ron")
+
+add_nums(**dict1)
+'''
+8
+some more code
+{}
+'''
+
+add_nums(**dict2, cat="red")
+'''
+8
+some more code
+{'d': 15, 'name': 'Ron', 'cat':'red'}
+'''
+```
