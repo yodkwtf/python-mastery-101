@@ -1,8 +1,22 @@
-def say_hello():
-    """ A simple function to return a hello msg to user"""
-    return "Hello Friend!"
+def calculate(**kwargs):
+    possible_values = {
+        'add': kwargs.get('first') + kwargs.get('second'),
+        'subtract': kwargs.get('first') - kwargs.get('second'),
+        'multiply': kwargs.get('first') * kwargs.get('second'),
+        'divide': kwargs.get('first') / kwargs.get('second')
+    }
+    
+    result = possible_values[kwargs.get('operation')]
+    
+    if kwargs.get('make_float') == True:
+        result = float(result)
+    else:
+        result = int(result)
+        
+    if kwargs.get('message'):
+        return "{} {}".format(kwargs['message'], result)
+    
+    return "The result is {}".format(result)
 
-print(say_hello())
-print(say_hello.__doc__)
-
-print(print.__doc__)
+print(calculate(make_float=False, operation='add', message='You just added', first=2, second=4))
+print(calculate(make_float=True, operation='divide', first=3.5, second=5))
