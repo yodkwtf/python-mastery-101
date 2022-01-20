@@ -8,6 +8,7 @@ playlist = {
   ]
 }
 
+# calculate the total duration of the playlist
 total_len = 0
 
 for song in playlist["songs"]:
