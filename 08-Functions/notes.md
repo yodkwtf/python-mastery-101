@@ -141,7 +141,7 @@ print(sum_nums(1,2,3,4,5)) #15
 
 - special operator passed w functions
 - looks for keyword arguments
-- gathers all the remaining keyword arguments after it is used into a dictionary
+- gathers all the remaining keyword arguments after it is used and turns them into a dictionary
 - can be called anything we want - `**some_name`
 
 ```py
