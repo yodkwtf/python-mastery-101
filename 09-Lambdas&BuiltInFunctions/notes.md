@@ -63,3 +63,31 @@ In most cases, we can achieve the same output as map and filter using list compr
 It's just good to know these things exist too.
 
 We might see the lambda way in certain external libraries so it's good to know.
+
+---
+
+## Built-In Functions
+
+#### all
+
+Returns true if all elements of iterable are truthy (or if the iterable is empty)
+
+```py
+print(all([0,1,3,4])) # False since 0 is falsy
+
+names = ["John", "Jack", "Jay"]
+is_J_first = [name[0]=="J" for name in names]
+
+print(is_J_first) # [True, True, True]
+print(all(is_J_first)) # True
+```
+
+#### any
+
+Returns true if any one of the iterable is truthy
+
+```py
+print(any([0, '', 4, None])) # True, since 4 is truthy
+```
+
+> When iterating over lists, we can avoid using list comprehensions when we're using `any` or `all` method and it'll work the same way. Incase we need the results for later use then using list comprehension would make good sense.
