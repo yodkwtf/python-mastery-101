@@ -91,3 +91,52 @@ print(any([0, '', 4, None])) # True, since 4 is truthy
 ```
 
 > When iterating over lists, we can avoid using list comprehensions when we're using `any` or `all` method and it'll work the same way. Incase we need the results for later use then using list comprehension would make good sense.
+
+#### sorted
+
+- Returns a new sorted _list_ from the items in iterable
+- Works on anything that is iterable
+
+```py
+numbers = [6, 12, 15, 11]
+
+print(sorted(numbers)) # [6, 11, 12, 15]
+print(sorted(numbers, reverse=True)) # [15, 12, 11, 6]
+```
+
+- Unlike the `sort` list method, it doesn't actually modify the list
+
+#### max and min
+
+**max** - Returns the largest item in an iterable or the largest b/w 2 or more passed arguments
+
+**min** - Returns the smallest item from an iterable or b/w the passed arguments
+
+```py
+max(3, 99, 67) # 99
+min(3, 99, 67) # 3
+
+max('c', 'd', 'a') # 'd'
+min('c', 'd', 'a') # 'a'
+
+max("hello world") # 'w'
+min("hello world") # ' '
+```
+
+#### reversed
+
+Reverses any iterator but returns a _reversed object_ and not a list
+
+```py
+for letter in reversed("hello"):
+  print(letter) # 'o' 'l' 'l' 'e' 'o'
+
+# using slice
+print("hello"[::-1]) # 'olleh'
+
+# doing above with reversed
+rev = "".join(list(reversed("hello")))
+print(rev) # 'olleh'
+```
+
+- Unlike the reverse list method it does not actually modify the iterator
