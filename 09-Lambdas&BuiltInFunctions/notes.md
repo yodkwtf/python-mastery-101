@@ -68,9 +68,9 @@ We might see the lambda way in certain external libraries so it's good to know.
 
 ## Built-In Functions
 
-#### all
+#### all() & any()
 
-Returns true if all elements of iterable are truthy (or if the iterable is empty)
+**all** - Returns true if all elements of iterable are truthy (or if the iterable is empty)
 
 ```py
 print(all([0,1,3,4])) # False since 0 is falsy
@@ -82,9 +82,7 @@ print(is_J_first) # [True, True, True]
 print(all(is_J_first)) # True
 ```
 
-#### any
-
-Returns true if any one of the iterable is truthy
+**any** - Returns true if any one of the iterable is truthy
 
 ```py
 print(any([0, '', 4, None])) # True, since 4 is truthy
@@ -92,7 +90,7 @@ print(any([0, '', 4, None])) # True, since 4 is truthy
 
 > When iterating over lists, we can avoid using list comprehensions when we're using `any` or `all` method and it'll work the same way. Incase we need the results for later use then using list comprehension would make good sense.
 
-#### sorted
+#### sorted()
 
 - Returns a new sorted _list_ from the items in iterable
 - Works on anything that is iterable
@@ -106,7 +104,7 @@ print(sorted(numbers, reverse=True)) # [15, 12, 11, 6]
 
 - Unlike the `sort` list method, it doesn't actually modify the list
 
-#### max and min
+#### max() and min()
 
 **max** - Returns the largest item in an iterable or the largest b/w 2 or more passed arguments
 
@@ -123,7 +121,7 @@ max("hello world") # 'w'
 min("hello world") # ' '
 ```
 
-#### reversed
+#### reversed()
 
 Reverses any iterator but returns a _reversed object_ and not a list
 
@@ -140,3 +138,12 @@ print(rev) # 'olleh'
 ```
 
 - Unlike the reverse list method it does not actually modify the iterator
+
+#### len()
+
+- Pretty basic, right? It returns the length of an object. List, string, tuple, dictionary (counts the np. of keys), you name it!
+- BTS, len uses a dunder (*d*ouble *under*score) method called **\_\_len\_\_()**
+  ```
+  'hello'.__len__() # 5
+  ```
+- We are not supposed to directly call this method but using this we can create our methods for our classes
