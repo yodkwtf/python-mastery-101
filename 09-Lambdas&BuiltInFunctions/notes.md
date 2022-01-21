@@ -177,3 +177,36 @@ round(-5.6) # -6
 round(75/7) # 11
 round(75/7, 3) # 10.714
 ```
+
+#### zip
+
+- Zips and returns the given iterators into a single collection called _iterator of tuples_
+- In the iterator of tuples, first element will be a tuple of first element of all the iterators passed in the zip function (see code below)
+
+```py
+first_zip = zip([1, 2, 3], [4, 5, 6])
+
+first_zip # <zip object at 0x000002257C54B100>
+
+list(first_zip) # [(1,4), (2,5), (3,6)]
+dict(first_zip) # {1:4, 2:5, 3:6}
+```
+
+- It stops zipping as soon as the shortest iterable runs out of the elements
+- **eg** - If n1 has 5 elements & n2 has 8 elements and they are zipped, the result iterator will only have 5 elements
+
+- We are not limited to just use numbers, we can even combine strings and anything else
+
+We can also unpack a list inside a zip function
+
+```py
+three_by_two = [(0,1), (1,2), (2,3)]
+
+z = list(zip(*three_by_two))
+# z = list(zip((0,1), (1,2), (2,3)))
+# z = [(0, 1, 2), (1, 2, 3)]
+```
+
+In the above code `*` is unpacking the list _three_by_two_ and taking out all of the tuples from it to pass them individually inside the zip function
+
+> All of these methods need not be remembered. They are just one google search away.

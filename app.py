@@ -1,5 +1,3 @@
-# Implement your is_all_strings function below:
-def is_all_strings(li):
-    return all(type(item)== str for item in li)
+first_zip = zip([1, 2, 3], [4, 5, 6])
 
-print(is_all_strings(['a', 'b']))
+print(first_zip)
