@@ -143,7 +143,37 @@ print(rev) # 'olleh'
 
 - Pretty basic, right? It returns the length of an object. List, string, tuple, dictionary (counts the np. of keys), you name it!
 - BTS, len uses a dunder (*d*ouble *under*score) method called **\_\_len\_\_()**
-  ```
+  ```py
   'hello'.__len__() # 5
   ```
 - We are not supposed to directly call this method but using this we can create our methods for our classes
+
+#### abs(), sum(), & round()
+
+**abs** - returns the absolute value of a number which can either be an integer or a floating point number
+
+```py
+abs(-25) #25
+abs(-75/8) #9.375
+abs(2.5) #2.5
+abs('20') # ERROR
+```
+
+**sums** - takes an iterable with an optional _start_ argument and returns the total sum of start and all the items of iterable (left to right)
+
+The default value of the _start_ argument is 0.
+
+```py
+sum([1, 2, 3]) # (1+2+3) = 6
+sum([1, 2, 3], 10) # 10 + (1+2+3) = 16
+sum([1, 2, 3], -11) # -11 + (1+2+3) = -5
+```
+
+**round** - returns number with _n digits_ after the decimal as specified. If not specified, it rounds off to the nearest integer.
+
+```py
+round(10.2) # 10
+round(-5.6) # -6
+round(75/7) # 11
+round(75/7, 3) # 10.714
+```

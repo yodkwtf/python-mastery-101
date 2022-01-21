@@ -22,3 +22,19 @@ for letter in reversed("hello"):
 
 rev = "".join(list(reversed("hello")))
 print(rev) # 'olleh'
+
+## ABS 
+print(abs(-25)) # 25
+print(abs(-75/8)) # 9.375
+print(abs(2.35)) # 2.35
+
+## SUM 
+print(sum([1,2,3])) #6
+print(sum([1,2,3], 10)) # 10 + (1+2+3) = 16
+print(sum([1,2,3], -8)) # ( -8 + (1+2+3)) = -2
+
+## ROUND 
+print(round(10.2)) # 10
+print(round(-5.6)) # (-6)
+print(round(75/7)) # 11
+print(round(75/7, 3)) # 10.714
