@@ -55,7 +55,7 @@ if cat["nails"]:
 
 # ! THE CORRECT WAY
 if "nails" in cat:
-  print("nail)
+  print("nail")
 ```
 
 ---

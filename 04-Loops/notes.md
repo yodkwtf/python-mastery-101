@@ -8,5 +8,5 @@
 ## While Loop
 
 - runs as long as a value is truthy
-- conditional statement run only once if a condition is true but this keep running as long as the condition doesn't become falsy
+- conditional statement runs only once if a condition is true but this keeps running as long as the condition doesn't become falsy
 - BE CAREFUL AND DON'T YOU DARE CREATE AN ENDLESS LOOP

@@ -41,7 +41,7 @@ print(list(doubles)) # [4, 8, 10, 12, 16]
 - it basically filters out values out of a collection based on the lambda
 - takes 2 argument, a function (usually lambda) and an iterable collection
 - runs lambda for each iterable and returns a collection called _filter object_
-- filter object only the values that return true to the lambda
+- filter object has only the values that return true to the lambda
 
 ```py
 # Filter out the evens from the list

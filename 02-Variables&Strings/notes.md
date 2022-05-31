@@ -28,7 +28,7 @@
 
 - should be named using snake_case
 - usually should be lowercase
-- CAPITAL_CAME_CASE refers to constants like pi(3.14)
+- CAPITAL_CAMEL_CASE refers to constants like pi(3.14)
 - UpperCamelCase refers to classes
 - variables with double underscore should be left alone and shouldn't be messed with - `__no_touch__`
 
@@ -70,7 +70,7 @@
 - used to combine multiple strings together
 - can be done using `+` operator in python
 
-##### Formatting Strings
+##### Formatted Strings
 
 - called F-strings, used to interpolate things
 - converts `int` into strings when written inside unlike concatenation

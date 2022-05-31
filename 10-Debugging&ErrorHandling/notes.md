@@ -8,7 +8,7 @@ raise ValueError('invalid value')
 # throws a value error
 ```
 
-- We have to be raise errors in a decent way with errors that make sense.
+- We have to raise errors in a decent way with errors that make sense.
 
 ---
 
