@@ -1,3 +1,3 @@
-first_zip = zip([1, 2, 3], [4, 5, 6])
+from random import randint
 
-print(first_zip)
+print(randint(1, 100)) # picks a random no. b/w 1-100
