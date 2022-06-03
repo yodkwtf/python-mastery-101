@@ -1,3 +1,13 @@
-from random import randint
+import keyword
+ 
+def contains_keyword(*args):
+    for item in args:
+      print(item)
+      if keyword.iskeyword(item): return True
+    return False
 
-print(randint(1, 100)) # picks a random no. b/w 1-100
+r1 = contains_keyword('return', 'hello')
+r2 = contains_keyword('orca', 'shark', 'return')
+
+print (r1)
+print (r2)
