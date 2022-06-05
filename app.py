@@ -1,13 +1,12 @@
-import keyword
- 
-def contains_keyword(*args):
-    for item in args:
-      print(item)
-      if keyword.iskeyword(item): return True
-    return False
+class Chicken:
+  total_eggs = 0
 
-r1 = contains_keyword('return', 'hello')
-r2 = contains_keyword('orca', 'shark', 'return')
+  def __init__(self, name, species, eggs = 0):
+    self.name = name
+    self.species = species
+    self.eggs = eggs
 
-print (r1)
-print (r2)
+  def lay_egg(self):
+    Chicken.total_eggs += 1
+    self.eggs += 1
+    return self.eggs
