@@ -1,12 +1,9 @@
-class Chicken:
-  total_eggs = 0
+class Train:
+  def __init__(self, num_cars):
+    self.num_cars = num_cars
 
-  def __init__(self, name, species, eggs = 0):
-    self.name = name
-    self.species = species
-    self.eggs = eggs
+  def __repr__(self):
+    return "{} car train".format(self.num_cars)
 
-  def lay_egg(self):
-    Chicken.total_eggs += 1
-    self.eggs += 1
-    return self.eggs
+  def __len__(self):
+    return self.num_cars

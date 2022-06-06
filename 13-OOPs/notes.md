@@ -34,7 +34,7 @@
 
 - Grouping of public and private attributes into a class
 
-##### **private attributes**
+##### _private attributes_
 
 - are the properties that don't need to be exposed (used) outside a class
 - we can use them but it's a convention to let other devs know that we shouldn't
@@ -94,7 +94,7 @@
 - Whatever we return from this func is the default return when we print that instance otherwise we get the instance in an unreadable format
 - Can change `<__main__.User object at 0x000001FE7C3BFEE0>` to `john doe`
 
-## Underscores, Dunder Methods, etc.
+##### _Underscores, Dunder Methods, etc._
 
 - `__init__` called dunder methods
 - have double underscore on both sides
@@ -112,3 +112,57 @@
 - `_name` - a convention to write private attributes
 - there's no such thing as an actual pvt attr. in python but it's for other devs to alert them
 - there pvt attr. can only be used by other attr. internally inside classes/functions
+
+## Inheritance
+
+- When a class inherits properties from another class (base or parent class)
+- Done by passing the parent class as na argument when defining child class
+- Multiple inheritance is also possible
+  - child element can inherit properties from multiple parent classes
+  - the order in which parent classes are passed matters
+  - not that commonly used
+
+## Properties
+
+- Makes it easy to work with methods inside classes as we don't have to call them with arguments
+- They can just be accessed like attributes
+- Decorators are used above the methods for this purpose
+- Kinda like syntactic sugar
+
+## Super()
+
+- Used to call the parent class inside the child's init method
+- Automatically passes _self_ as the first argument
+- Helps reduce code duplication as we don't have to call separate init for all the child classes
+
+```
+super().__init__(name, species) ✅
+Animal.__init__(self, name, species) ❌
+```
+
+## Method Resolution Order (MRO)
+
+- When a class is created python sets up MRO behind the scenes
+- It is the order in which python will look for methods on instances of the class
+- A lot of complexity behind the scenes on python decides the order
+- MRO can be referenced in 3 ways -
+  - **\_\_mro\_\_** dunder attribute on class
+  - **mro()** method on class
+  - builtin **help(cls)** method -> most readable way
+- Not that common topic
+
+## Polymorphism
+
+- An object can take on many(poly) forms(morph)
+- Two most important practical applications
+  - same class method works similar way for different classes
+    eg. a speak method on class Dog, Cat, etc.
+  - same operation working for different kinds of objects
+    eg. len('string'), len([1,2,3])
+
+## Special Methods
+
+- Called magic methods, tell python how to handle certain operations behind the scenes
+- All of them are dunder methods
+- Can be overwritten inside classes
+- Can allow us to mutate how certain operations work in python
