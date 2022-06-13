@@ -1,7 +1,7 @@
 '''
 @delay(3)
 def say_hi():
-    return "hi"
+  return "hi"
 
 say_hi()
 # should print the message "Waiting 3s before running say_hi" to the console
@@ -27,6 +27,6 @@ def delay(time):
 
 @delay(3)
 def say_hi():
-    return "hi"
+  return "hi"
 
 print(say_hi())
