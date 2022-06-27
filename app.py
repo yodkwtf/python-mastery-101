@@ -1,32 +1,11 @@
-'''
-@delay(3)
-def say_hi():
-    return "hi"
+# Don't forget to import re!
+import re
 
-say_hi()
-# should print the message "Waiting 3s before running say_hi" to the console
-# should then wait 3 seconds
-# finally, should invoke say_hi and return "hi"
-'''
 
-from functools import wraps
-from time import sleep
-
-help(sleep)
-
-def delay(time):
-
-  def inner(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-      print("Waiting {}s before running {}".format(time, fn.__name__))
-      sleep(time)
-      return fn(*args, **kwargs)
-    return wrapper
-  return inner
-
-@delay(3)
-def say_hi():
-    return "hi"
-
-print(say_hi())
+# Define is_valid_time below:
+def is_valid_time(input):
+    time_regex = re.compile(r'\d\d?:\d{2}')
+    match = time_regex.fullmatch(input)
+    if match:
+        return True
+    return False
