@@ -28,3 +28,7 @@ For more info about a specific topic, navigate to that topic's directory and che
 20. [Regex](/20-Regex)
 
 > **Note to Self**: Most of the exercises solved during the course are present in Udemy's editor. Make sure to reference them whenever needed.
+
+#### Course Slides
+
+[Link to Course Slides](https://drive.google.com/drive/folders/1HOe4BzdV--zYVhyKur4hXVAkw5uDNijR)
